@@ -15,3 +15,13 @@ func ExampleWeekday() {
 	// Output:
 	// 星期五
 }
+
+func ExampleShortWeekday() {
+	gc.Weekday(time.Now())
+
+	weekday := gc.ShortWeekday(time.Date(2023, 10, 12, 0, 0, 0, 0, time.Local))
+	fmt.Println(weekday)
+
+	// Output:
+	// 周四
+}

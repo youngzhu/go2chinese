@@ -26,6 +26,10 @@ func Weekday(t time.Time) string {
 	return longWeekdayNames[t.Weekday()]
 }
 
+func ShortWeekday(t time.Time) string {
+	return shortWeekdayNames[t.Weekday()]
+}
+
 var longWeekdayNames = []string{
 	Sunday,
 	Monday,
