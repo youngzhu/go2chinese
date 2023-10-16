@@ -53,13 +53,13 @@ func TestWeekday(t *testing.T) {
 		name string
 	}{
 		{time.Now(), longWeekdayNames[time.Now().Weekday()]},
-		{time.Date(2023, 10, 13, 0, 0, 0, 0, time.Local), Friday},
-		{time.Date(2023, 10, 14, 0, 0, 0, 0, time.Local), Saturday},
-		{time.Date(2023, 10, 15, 0, 0, 0, 0, time.Local), Sunday},
-		{time.Date(2023, 10, 16, 0, 0, 0, 0, time.Local), Monday},
-		{time.Date(2023, 10, 17, 0, 0, 0, 0, time.Local), Tuesday},
-		{time.Date(2023, 10, 18, 0, 0, 0, 0, time.Local), Wednesday},
-		{time.Date(2023, 10, 19, 0, 0, 0, 0, time.Local), Thursday},
+		{newDate(2023, 10, 13), Friday},
+		{newDate(2023, 10, 14), Saturday},
+		{newDate(2023, 10, 15), Sunday},
+		{newDate(2023, 10, 16), Monday},
+		{newDate(2023, 10, 17), Tuesday},
+		{newDate(2023, 10, 18), Wednesday},
+		{newDate(2023, 10, 19), Thursday},
 	}
 	for _, testcase := range testcases {
 		t.Run("", func(t *testing.T) {
@@ -77,13 +77,13 @@ func TestShortWeekday(t *testing.T) {
 		name string
 	}{
 		{time.Now(), shortWeekdayNames[time.Now().Weekday()]},
-		{time.Date(2023, 10, 13, 0, 0, 0, 0, time.Local), FridayShort},
-		{time.Date(2023, 10, 14, 0, 0, 0, 0, time.Local), SaturdayShort},
-		{time.Date(2023, 10, 15, 0, 0, 0, 0, time.Local), SundayShort},
-		{time.Date(2023, 10, 16, 0, 0, 0, 0, time.Local), MondayShort},
-		{time.Date(2023, 10, 17, 0, 0, 0, 0, time.Local), TuesdayShort},
-		{time.Date(2023, 10, 18, 0, 0, 0, 0, time.Local), WednesdayShort},
-		{time.Date(2023, 10, 19, 0, 0, 0, 0, time.Local), ThursdayShort},
+		{newDate(2023, 10, 13), FridayShort},
+		{newDate(2023, 10, 14), SaturdayShort},
+		{newDate(2023, 10, 15), SundayShort},
+		{newDate(2023, 10, 16), MondayShort},
+		{newDate(2023, 10, 17), TuesdayShort},
+		{newDate(2023, 10, 18), WednesdayShort},
+		{newDate(2023, 10, 19), ThursdayShort},
 	}
 	for _, testcase := range testcases {
 		t.Run("", func(t *testing.T) {
