@@ -25,3 +25,23 @@ func ExampleShortWeekday() {
 	// Output:
 	// 周四
 }
+
+func ExampleDate() {
+	gc.Date(time.Now())
+
+	date := gc.Date(time.Date(2023, 10, 16, 0, 0, 0, 0, time.Local))
+	fmt.Println(date)
+
+	// Output:
+	// 2023年10月16日
+}
+
+func ExampleDatetime() {
+	gc.Date(time.Now())
+
+	date := gc.Datetime(time.Date(2023, 8, 8, 8, 8, 8, 0, time.Local))
+	fmt.Println(date)
+
+	// Output:
+	// 2023年8月8日 8时8分8秒
+}
